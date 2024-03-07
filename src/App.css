@@ -1,0 +1,78 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.btn_collapse {
+  color: white;
+  background-color: rgb(54, 127, 236);
+  opacity: 0.8;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 10px;
+  margin-bottom: 20px;
+
+  transition: all 1s ease;
+}
+
+
+.btn_collapse:hover {
+  outline: 5px solid rgb(0, 174, 255);
+  opacity: 1;
+}
+
+.btn_collapse:active {
+  background-color: blue;
+}
+
+.collapsible_container {
+  border: 1px solid gray;
+  height: 0;
+  overflow-y: hidden;
+
+  display: none;
+
+  animation: hide 1s linear;
+}
+
+.show {
+  display: block;
+  height: 180px;
+  animation: show 1s linear;
+}
+
+@keyframes show {
+  0% {
+      display: none;
+      height: 0;
+  }
+
+  1% {
+      display: block;
+  }
+
+  100% {
+      display: block;
+      height: 180px;
+  }
+}
+
+@keyframes hide {
+  0% {
+      display: block;
+      height: 180px;
+  }
+
+  100% {
+      display: none;
+      height: 0;
+  }
+}
+
+.collapsible_text {
+  margin: 10px;
+}
